@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Referenzen | Bavaria Webdesign</title>
+  <meta name="description" content="Ausgewählte Arbeiten und Galerie. Upload nur im Admin‑Modus." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="light">
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="brand">
+      <span class="logo-dot"></span>
+      <span class="brand-name">bavaria<span class="accent">webdesign</span></span>
+    </a>
+    <nav id="site-nav" class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">Über uns</a>
+      <a href="offer.html">Leistungen & Preise</a>
+      <a href="work.html">Referenzen</a>
+      <a href="contact.html">Kontakt</a>
+    </nav>
+    <button id="burger" class="burger" aria-label="Menü umschalten" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section id="work" class="work section">
+  <div class="container">
+    <h2 class="section-title">Referenzen</h2>
+    <p class="section-subtitle">Hier zeigen wir ausgewählte Arbeiten.</p>
+
+    <div class="upload-ref" data-guarded>
+      <input type="file" id="refInput" accept="image/*" multiple hidden>
+      <button class="btn ghost" id="refBtn">Referenzen hochladen</button>
+      <p class="tiny muted">Upload ist nur im Admin‑Modus sichtbar.</p>
+    </div>
+
+    <div id="gallery" class="gallery"></div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <p>© <span id="year"></span> Bavaria Webdesign — Bence & Partnerin. Alle Rechte vorbehalten.</p>
+    <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">Über uns</a>
+      <a href="offer.html">Leistungen</a>
+      <a href="work.html">Referenzen</a>
+      <a href="contact.html">Kontakt</a>
+    </nav>
+    <button class="admin-btn" id="adminBtn" title="Admin">🔒</button>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

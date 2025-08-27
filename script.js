@@ -1,0 +1,10 @@
+// Mobile menu
+const burger=document.getElementById('burger');const nav=document.getElementById('site-nav');if(burger){burger.addEventListener('click',()=>{const e='true'===burger.getAttribute('aria-expanded');burger.setAttribute('aria-expanded',String(!e)),nav.classList.toggle('open')})}
+const y=document.getElementById('year');y&&(y.textContent=(new Date).getFullYear());
+const ADMIN_PIN='bwd-2025';let isAdmin='1'===localStorage.getItem('bwd_admin');
+function updateGuardedVisibility(){document.querySelectorAll('[data-guarded]').forEach(e=>{e.style.display=isAdmin?'':'none'})}
+updateGuardedVisibility();
+const adminBtn=document.getElementById('adminBtn');if(adminBtn){adminBtn.addEventListener('click',()=>{if(!isAdmin){const e=prompt('Admin-PIN eingeben:');'bwd-2025'===e?(isAdmin=!0,localStorage.setItem('bwd_admin','1'),updateGuardedVisibility(),adminBtn.textContent='🔓'):alert('Falscher PIN.')}else confirm('Admin-Modus deaktivieren?')&&(isAdmin=!1,localStorage.removeItem('bwd_admin'),updateGuardedVisibility(),adminBtn.textContent='🔒')});isAdmin&&(adminBtn.textContent='🔓')}
+function setupAvatar(e,t){const n=document.getElementById(e),o=document.getElementById(t);if(!n||!o)return;const d=document.querySelector(`[data-input="${e}"]`);null==d||d.addEventListener('click',()=>n.click()),n.addEventListener('change',e=>{const t=e.target.files?.[0];if(!t)return;const n=new FileReader;n.onload=e=>{o.src=e.target.result},n.readAsDataURL(t)})}
+setupAvatar('avatarTogether','imgTogether');
+const refBtn=document.getElementById('refBtn'),refInput=document.getElementById('refInput'),gallery=document.getElementById('gallery');if(refBtn&&refInput&&gallery){refBtn.addEventListener('click',()=>refInput.click()),refInput.addEventListener('change',e=>{Array.from(e.target.files||[]).forEach(e=>{const t=new FileReader;t.onload=e=>{const t=document.createElement('div');t.className='tile';const n=document.createElement('img');n.src=e.target.result,n.alt='Referenz',t.appendChild(n),gallery.prepend(t)},t.readAsDataURL(e)})})}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Leistungen & Preise | Bavaria Webdesign</title>
+  <meta name="description" content="Packages: Landing Page 299 €, Website ab 699 €, Pflege 50 €/Monat. Add-ons verfügbar." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="light">
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="index.html" class="brand">
+      <span class="logo-dot"></span>
+      <span class="brand-name">bavaria<span class="accent">webdesign</span></span>
+    </a>
+    <nav id="site-nav" class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">Über uns</a>
+      <a href="offer.html">Leistungen & Preise</a>
+      <a href="work.html">Referenzen</a>
+      <a href="contact.html">Kontakt</a>
+    </nav>
+    <button id="burger" class="burger" aria-label="Menü umschalten" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section id="offer" class="offer section">
+  <div class="container">
+    <h2 class="section-title">Leistungen & Preise</h2>
+    <p class="section-subtitle">Transparente Pakete – optional erweiterbar.</p>
+
+    <div class="pricing-grid">
+      <div class="price-card card lift">
+        <div class="badge">Beliebt</div>
+        <h3>Landing Page</h3>
+        <div class="price-value"><span class="currency">€</span><span class="amount">299</span></div>
+        <ul class="checklist">
+          <li>Individuelles Design (pastell & modern)</li>
+          <li>SEO‑Basics & schnelle Ladezeit</li>
+          <li>Google‑Karte eingebettet</li>
+          <li>Kontaktformular (Formservice möglich)</li>
+          <li>Responsive (Mobil, Tablet, Desktop)</li>
+        </ul>
+        <a href="contact.html" class="btn primary full">Jetzt starten</a>
+      </div>
+
+      <div class="price-card card lift">
+        <h3>Mehrseitige Website</h3>
+        <p class="muted">ab</p>
+        <div class="price-value"><span class="currency">€</span><span class="amount">699</span></div>
+        <ul class="checklist">
+          <li>Startseite + 3 Unterseiten</li>
+          <li>Erweiterbares Navigationskonzept</li>
+          <li>On‑Page SEO‑Struktur</li>
+          <li>Analytik (GA4) & Cookie‑Hinweis</li>
+          <li>Termin-/Anfrage‑Formulare</li>
+        </ul>
+        <a href="contact.html" class="btn ghost full">Angebot anfragen</a>
+      </div>
+
+      <div class="price-card card lift">
+        <h3>Pflege & Support</h3>
+        <div class="price-value small"><span class="currency">€</span><span class="amount">50</span><span class="per">/Monat</span></div>
+        <ul class="checklist">
+          <li>Inhalts‑Updates (kleinere Änderungen)</li>
+          <li>Sicherheits‑ & Performance‑Check</li>
+          <li>Monatliches Backup</li>
+          <li>Priorisierter E‑Mail‑Support</li>
+        </ul>
+        <a href="contact.html" class="btn ghost full">Interesse</a>
+      </div>
+    </div>
+
+    <div class="addons">
+      <h3>Optionale Add‑ons</h3>
+      <ul class="tags">
+        <li>Logo & Mini‑Brandkit – 199 €</li>
+        <li>Texterstellung (Landing Page) – 149 €</li>
+        <li>Mehrsprachigkeit (DE/EN) – 129 €</li>
+        <li>Buchungsformular/Termin – 99 €</li>
+        <li>Analytics Setup (GA4) – 49 €</li>
+        <li>CMS-Anbindung (z. B. Netlify CMS) – ab 179 €</li>
+      </ul>
+      <p class="tiny muted">Alle Preise inkl. Einrichtung. Komplexere Projekte nach Aufwand.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <p>© <span id="year"></span> Bavaria Webdesign — Bence & Partnerin. Alle Rechte vorbehalten.</p>
+    <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">Über uns</a>
+      <a href="offer.html">Leistungen</a>
+      <a href="work.html">Referenzen</a>
+      <a href="contact.html">Kontakt</a>
+    </nav>
+    <button class="admin-btn" id="adminBtn" title="Admin">🔒</button>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
